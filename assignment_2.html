@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Booking System</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f9f9f9;">
+    <table border="1" width="100%" bgcolor="lightblue">
+        <tr>
+            <td width="10%">
+                <img src="asnmnt_2 logo.png" alt="Logo" width="40" height="40">
+            </td>
+            <td >Book</td>
+        </tr>
+    </table>
+
+  <h2 style="text-align:center; color: darkblue;">* Welcome to Bus Booking System *</h2>
+
+  <table style="width: 100%; margin-top: 20px;">
+    <tr>
+      <!-- Left side: Form -->
+      <td style="width: 60%; vertical-align: top;">
+        <form action="assignment_2_subpage.html" method="post" style="width: 350px; margin: auto;">
+          <fieldset style="border: 2px solid darkblue; border-radius: 6px; padding: 15px; background-color: #ffffff;">
+            <legend style="font-weight: bold; color: darkblue;">User Details</legend>
+
+            <p>
+              <label>User Name: </label><br>
+              <input type="text" name="username" required style="width: 100%; padding: 5px;">
+            </p>
+
+            <p>
+              <label>Password: </label><br>
+              <input type="password" name="password" required style="width: 100%; padding: 5px;">
+            </p>
+
+            <p>
+              <label>Gender: </label><br>
+              <input type="radio" name="gender" value="male"> Male<br>
+              <input type="radio" name="gender" value="female"> Female
+            </p>
+
+            <p>
+              <label>City: </label><br>
+              <select name="city" style="width: 100%; padding: 5px;">
+                <option value="">Select your city</option>
+                <option value="meerut">Meerut</option>
+                <option value="delhi">Delhi</option>
+                <option value="lucknow">Lucknow</option>
+                <option value="kanpur">Kanpur</option>
+              </select>
+            </p>
+
+            <p>
+              <input type="submit" value="Next →" style="background-color: darkblue; color: white; padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer;">
+            </p>
+          </fieldset>
+        </form>
+      </td>
+
+      <!-- Right side: Image -->
+      <td style="width: 40%; text-align: center; vertical-align: middle;">
+        <img src="asnmnt_2 logo.png" alt="Bus Image" width="250">
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
