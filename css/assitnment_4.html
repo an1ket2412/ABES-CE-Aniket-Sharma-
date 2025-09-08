@@ -1,0 +1,150 @@
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flex Navbar with Search Icon</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f8f8f8;
+    }
+
+    .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2874f0;
+    }
+
+    .search {
+        flex: 1;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #888;
+    }
+
+    .search input {
+        width: 100%;
+        padding: 8px 8px 8px 30px;
+        /* space for icon */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .actions {
+        display: flex;
+        gap: 15px;
+    }
+
+    .action {
+        font-size: 14px;
+        cursor: pointer;
+        color: #333;
+    }
+
+    .categories {
+        display: flex;
+        justify-content: space-around;
+        background: #fff;
+        padding: 12px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .cat {
+        flex: 1;
+        text-align: center;
+        font-size: 13px;
+        color: #444;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .cat img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+
+    .cat:hover {
+        color: #000;
+    }
+</style>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="logo">Flipkart+</div>
+        <div class="search">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Search for Products, Brands and More">
+        </div>
+        <div class="actions">
+            <div class="action">Login</div>
+            <div class="action">Cart</div>
+            <div class="action">Become a Seller</div>
+            <div class="action">⋮</div>
+        </div>
+    </div>
+    <div class="categories">
+        <div class="cat">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/e00302d428f5c7be.png?q=100" alt="Minutes">
+            <div>Minutes</div>
+        </div>
+        <div class="cat">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/5f2ee7f883cdb774.png?q=100" alt="Mobiles">
+            <div>Mobiles & Tablets</div>
+        </div>
+        <div class="cat">
+            <img
+                src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/e/k/c/l-combo-st-black-white-combraided-original-imahauh2xbyycxvg.jpeg?q=70">
+            <div>Fashion</div>
+        </div>
+        <div class="cat">
+            <img src="https://app.dropinblog.com/uploaded/blogs/34241141/files/Electronics.png" alt="Electronics">
+            <div>Electronics</div>
+        </div>
+        <div class="cat">
+            <img src="https://www.woodleys.com/blog/wp-content/uploads/sites/105/2022/02/8-Living-Room-Furniture-Ideas-for-Your-New-Home.jpg"
+                alt="Home">
+            <div>Home & Furniture</div>
+        </div>
+        <div class="cat">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/e90944802d996756.jpg?q=100" alt="TVs">
+            <div>TVs & Appliances</div>
+        </div>
+        <div class="cat">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuJJE8_l2h6iO_AuSPz2hy4YhxhQxJUa8Tg&s"
+                alt="Flight">
+            <div>Flight Bookings</div>
+        </div>
+        <div class="cat">
+            <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content6560.jpg" alt="Beauty">
+            <div>Beauty, Food..</div>
+        </div>
+        <div class="cat">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMMDgofWkyi6-0pVZ4ifRc4FGy4UDLiirNZw&s"
+                alt="Grocery">
+            <div>Grocery</div>
+        </div>
+    </div>
+</body>
+
+</html>
