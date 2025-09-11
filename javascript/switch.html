@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Day of Week (switch + var)</title>
+</head>
+<body>
+  <h2 id="result"></h2>
+
+  <script>
+    // get today's date
+    var today = new Date();
+    var dayNumber = today.getDay();  // 0 = Sunday, 1 = Monday ...
+
+    var dayName;
+
+    switch (dayNumber) {
+      case 0:
+        dayName = "Sunday";
+        break;
+      case 1:
+        dayName = "Monday";
+        break;
+      case 2:
+        dayName = "Tuesday";
+        break;
+      case 3:
+        dayName = "Wednesday";
+        break;
+      case 4:
+        dayName = "Thursday";
+        break;
+      case 5:
+        dayName = "Friday";
+        break;
+      case 6:
+        dayName = "Saturday";
+        break;
+      default:
+        dayName = "Unknown";
+    }
+
+    document.getElementById("result").textContent = "Today is " + dayName;
+  </script>
+</body>
+</html>

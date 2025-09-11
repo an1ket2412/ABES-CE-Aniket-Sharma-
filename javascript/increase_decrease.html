@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Increment / Decrement Example</title>
+</head>
+<body>
+  <h2>Counter</h2>
+
+  <div id="value">0</div>
+
+  <button onclick="decrement()">-</button>
+  <button onclick="increment()">+</button>
+
+  <script>
+    var count = 0;  // starting value
+
+    function increment() {
+      count++;
+      document.getElementById("value").textContent = count;
+    }
+
+    function decrement() {
+      count--;
+      document.getElementById("value").textContent = count;
+    }
+  </script>
+</body>
+</html>
