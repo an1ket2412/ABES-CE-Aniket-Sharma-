@@ -7,15 +7,18 @@
 </head>
 <body>
     <script>
-        function getdata(dataId){
+        function getData(dataid,getnextdata){
             setTimeout(()=>{
-                console.log("data",dataId);
+                console.log("data",dataid);
             },2000);
-
         }
-        getdata(1);
-        getdata(2);
-        getdata(3);
+        getData(1,()=>{
+            getData(2,()=>{
+                getData(3,()=>{
+                    getData(4);
+                });
+            });
+        });
     </script>
 </body>
 </html>
