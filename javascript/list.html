@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task List</title>
+</head>
+<body>
+  <h2>My Tasks</h2>
+  <ul id="taskList"></ul>
+  <br>
+  <a href="assignment_10.html">edit to do list</a>
+
+  <script>
+    function loadTasks() {
+      let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+      let list = document.getElementById("taskList");
+      list.innerHTML = "";
+
+      tasks.forEach(task => {
+        let li = document.createElement("li");
+        li.textContent = task;
+        list.appendChild(li);
+      });
+    }
+
+    window.onload = loadTasks;
+  </script>
+</body>
+</html>

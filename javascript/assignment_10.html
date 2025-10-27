@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Tasks</title>
+</head>
+<body>
+  <h2>Add a Task</h2>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button onclick="addTask()">Add</button>
+  <br><br>
+  <a href="list.html">List of task</a>
+
+  <script>
+    function addTask() {
+      let input = document.getElementById("taskInput");
+      let task = input.value.trim();
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        tasks.push(task);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        input.value = "";
+        alert("Task added!");
+    }
+  </script>
+</body>
+</html>
