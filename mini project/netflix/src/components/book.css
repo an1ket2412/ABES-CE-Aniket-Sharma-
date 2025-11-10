@@ -1,20 +1,96 @@
-#book{
-    border: 5px solid red;
-    height: 300px;
-    width: 300px;
-    background-color: coral;
+/* ===== Book Card Container ===== */
+#book {
+  border: 3px solid red;
+  height: 350px;
+  width: 280px;
+  background-color: coral;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+/* Subtle hover effect for card */
+#book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Image Styling ===== */
+#book img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===== Title and Price ===== */
+#book h1 {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #222;
+}
+
+/* ===== Quantity Button Section ===== */
+#book div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ===== Buttons ( + , - , Add to Cart ) ===== */
 #book button {
   background-color: #008cff;
   color: white;
   border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Hover effect for buttons */
 #book button:hover {
   background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+/* ===== Quantity Number ===== */
+#book span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  width: 30px;
+  text-align: center;
+}
+
+/* ===== Add to Cart Button ===== */
+#book .add-to-cart {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #008cff;
+  padding: 10px 0;
+  font-size: 17px;
+  border-radius: 8px;
+}
+
+/* Change color when added */
+#book .added {
+  background-color: green !important;
+}
+
+/* Hover for Add to Cart */
+#book .add-to-cart:hover {
+  background-color: #006dd6;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 768px) {
+  #book {
+    width: 90%;
+    height: auto;
+  }
 }

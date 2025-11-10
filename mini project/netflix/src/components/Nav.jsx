@@ -1,27 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Nav.css";
 
 function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="logo">MySite</div>
-
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="#">About</Link>
-        <Link to="#">Services</Link>
-        <Link to="#">Contact</Link>
-      </div>
-
-      <div className="auth-buttons">
-        <Link to="/login" className="btn">
-          Login
-        </Link>
-        <Link to="/register" className="btn">
-          Register
-        </Link>
-      </div>
+    <nav
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: "20px",
+        backgroundColor: "#333",
+        padding: "15px",
+      }}
+    >
+      <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+        Home
+      </Link>
+      <Link to="/login" style={{ color: "white", textDecoration: "none" }}>
+        Login
+      </Link>
+      <Link to="/register" style={{ color: "white", textDecoration: "none" }}>
+        Register
+      </Link>
+      <Link to="/cart" style={{ color: "white", textDecoration: "none" }}>
+        🛒 Cart
+      </Link>
     </nav>
   );
 }

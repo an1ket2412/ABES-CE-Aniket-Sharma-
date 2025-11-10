@@ -4,6 +4,7 @@ import Navbar from "./components/Nav";
 import Book from "./components/book";
 import Login from "./components/login";
 import Register from "./components/register";
+import Cart from "./components/cart"; // ✅ Import Cart
 import "./App.css";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
           <Route
             path="/"
             element={
-              <div>
+              <div className="books-container">
                 <Book title="Math" Price={200} />
                 <Book title="Physics" Price={500} />
                 <Book title="Chemistry" Price={900} />
@@ -24,6 +25,7 @@ function App() {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/cart" element={<Cart />} /> {/* ✅ Cart route */}
         </Routes>
       </div>
     </>
