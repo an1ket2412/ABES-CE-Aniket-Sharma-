@@ -25,3 +25,10 @@ body {
   flex-wrap: wrap; 
   margin-bottom: 40px ;   /* makes them wrap on smaller screens */
 }
+#adi div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}

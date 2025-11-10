@@ -1,18 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Link1 from './components/link1.jsx'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Nav";
+import Book from "./components/book";
+import Login from "./components/login";
+import Register from "./components/register";
+import "./App.css";
 
 function App() {
-
   return (
     <>
-      <div>
-        <Link1/>
+      <Navbar />
+      <div id="adi">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                <Book title="Math" Price={200} />
+                <Book title="Physics" Price={500} />
+                <Book title="Chemistry" Price={900} />
+              </div>
+            }
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

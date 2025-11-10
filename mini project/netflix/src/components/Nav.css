@@ -1,19 +1,33 @@
-nav {
-  background-color: #333;
-  overflow: hidden;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: #282c34;
 }
 
-nav a {
-  float: left;
-  display: block;
+.logo {
+  color: #61dafb;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links a {
   color: white;
-  text-align: center;
-  padding: 14px 20px;
+  margin: 0 15px;
   text-decoration: none;
-  font-family: Arial, sans-serif;
 }
 
-nav a:hover {
-  background-color: #ddd;
+.auth-buttons .btn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background-color: #61dafb;
+  border-radius: 5px;
   color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-buttons .btn:hover {
+  background-color: #4fa3d1;
 }
