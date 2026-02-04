@@ -25,17 +25,17 @@ function Cart() {
             }}
           >
             <thead>
-              <tr style={{ backgroundColor: "#f2f2f2" }}>
-                <th style={{ padding: "10px", border: "1px solid #ccc" }}>
+              <tr style={{ backgroundColor: "#030202ff" }}>
+                <th style={{ padding: "10px", border: "1px solid #311e1eff" }}>
                   Title
                 </th>
-                <th style={{ padding: "10px", border: "1px solid #ccc" }}>
+                <th style={{ padding: "10px", border: "1px solid #311e1eff" }}>
                   Quantity
                 </th>
-                <th style={{ padding: "10px", border: "1px solid #ccc" }}>
+                <th style={{ padding: "10px", border: "1px solid #311e1eff" }}>
                   Price
                 </th>
-                <th style={{ padding: "10px", border: "1px solid #ccc" }}>
+                <th style={{ padding: "10px", border: "1px solid #311e1eff" }}>
                   Total
                 </th>
                 <th></th>
@@ -44,16 +44,16 @@ function Cart() {
             <tbody>
               {cartItems.map((item) => (
                 <tr key={item.title}>
-                  <td style={{ border: "1px solid #ccc", padding: "10px" }}>
+                  <td style={{ border: "1px solid #311e1eff", padding: "10px" }}>
                     {item.title}
                   </td>
-                  <td style={{ border: "1px solid #ccc", padding: "10px" }}>
+                  <td style={{ border: "1px solid #311e1eff", padding: "10px" }}>
                     {item.quantity}
                   </td>
-                  <td style={{ border: "1px solid #ccc", padding: "10px" }}>
+                  <td style={{ border: "1px solid #311e1eff", padding: "10px" }}>
                     ₹{item.price}
                   </td>
-                  <td style={{ border: "1px solid #ccc", padding: "10px" }}>
+                  <td style={{ border: "1px solid #311e1eff", padding: "10px" }}>
                     ₹{item.price * item.quantity}
                   </td>
                   <td>
