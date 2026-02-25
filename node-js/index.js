@@ -73,8 +73,49 @@
 //   console.log("Server is listening on http://localhost:3000");
 // });
 
-const http = require("http");
-const fs = require("fs");
+    // const fs = require('fs');
 
-const home= fs.readFileSync("./a.html");
-const myserver = http.createServer((req, res) => {
+    // fs.readFile('./a.json', 'utf8', (err, jsonString) => {
+    //     if (err) {
+    //         console.log("Error reading file:", err);
+    //         return;
+    //     }
+
+    //     try {
+
+    //         const data = JSON.parse(jsonString);
+
+    //         data.push({
+    //             "firstName": "Jane",
+    //             "lastName": "Doe",
+    //             "age": 28
+    //         });
+
+
+    //         fs.writeFile('./a.json', JSON.stringify(data, null, 2), (err) => {
+    //             if (err) {
+    //                 console.log("Error writing file:", err);
+    //             } else {
+    //                 console.log("Array updated and file saved successfully!");
+    //             }
+    //         });
+
+    //     } catch (parseErr) {
+    //         console.log("Error parsing JSON:", parseErr);
+    //     }
+    // });
+
+const fs = require('fs');
+
+const targetName = "Anna";
+
+fs.readFile('./a.json', 'utf8', (err, data) => {
+    if (err) return console.log(err);
+    let people = JSON.parse(data);
+    const updatedPeople = people.filter(person => person.firstName !== targetName);
+    fs.writeFile('./a.json', JSON.stringify(updatedPeople, null, 2), (err) => {
+        if (err) console.log(err);
+        else console.log(`Deleted ${targetName}. File updated!`);
+    });
+});
+
